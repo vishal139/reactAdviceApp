@@ -1,38 +1,75 @@
-.App {
-  text-align: center;
+#root,html, body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    box-sizing: border-box;
+    color: rgb(66, 24, 24);
+}
+.app{
+    height: 100%;
+    background:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,.2)), url('./images/city.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.card{
+    background-color: rgb(219, 204, 204);
+    width: 40%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 25px;
+    padding: 2%;
+    box-shadow: 5px 5px 10px black;
+
+}
+.heading{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Open Sans', sans-serif;
+    height: 580px;
+}
+.btn{
+    outline: none;
+    text-decoration: none;
+    border-radius: 50px;
+    height: 200px;
+    width: 210px;
+    text-transform: uppercase;
+    border: 1px solid rgba(22, 76, 167,0.6);
+    cursor: pointer;
+    /* background-color: red; */
+}
+.btn:hover{
+    animation: myanim 0.7s ease-in-out both;
+    background-color: rgb(209, 181, 181);
+    color: red;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@keyframes myanim {
+    0%{
+        transform: translate3d(0,0,0);
+    }
+    25%{
+        transform: translate3d(4x,0,0);
+    }
+    50%{
+        transform: translate3d(-3px,0,0);
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+    }
+    75%{
+        transform: translate3d(2px,0,0);
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+    }
+    100%{
+        transform: translate3d(0,0,0);
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    }
+    
 }
